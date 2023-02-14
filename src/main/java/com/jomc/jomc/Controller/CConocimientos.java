@@ -21,14 +21,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("conoci")
-@CrossOrigin(origins = "https://portfoliojorgefront.web.app/")
+@RequestMapping("/conoci")
+@CrossOrigin(origins = "https://portfoliojorgefront.web.app")
 public class CConocimientos {
     @Autowired
     SConocimientos sConocimientos;
     
     //Crea una variable con una lista de los conocimientos
-    @GetMapping("listac")
+    @GetMapping("/listac")
     public ResponseEntity<List<Conocimientos>> list(){
       List<Conocimientos> list = sConocimientos.list();  
       return new ResponseEntity(list, HttpStatus.OK);
@@ -43,7 +43,7 @@ public class CConocimientos {
         return new ResponseEntity(conocimientos, HttpStatus.OK);
     }
     
-    @PostMapping("createc")
+    @PostMapping("/createc")
     public ResponseEntity<?> create(@RequestBody dtoConocimientos dtoconoc){
         if(StringUtils.isBlank(dtoconoc.getTituloC()))
             return new ResponseEntity(new Mensaje("El titulo es obligatorio"), HttpStatus.BAD_REQUEST);
