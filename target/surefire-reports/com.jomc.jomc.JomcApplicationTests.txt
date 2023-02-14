@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.jomc.jomc.JomcApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.732 s - in com.jomc.jomc.JomcApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.917 s - in com.jomc.jomc.JomcApplicationTests
