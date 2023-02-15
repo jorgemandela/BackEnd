@@ -8,6 +8,7 @@ com\jomc\jomc\Dto\dtoConocimientos.class
 com\jomc\jomc\Dto\dtoSkills.class
 com\jomc\jomc\Repository\RConocimientos.class
 com\jomc\jomc\Security\jwt\JwtTokenFilter.class
+com\jomc\jomc\JomcApplication$1.class
 com\jomc\jomc\Controller\CExperiencia.class
 com\jomc\jomc\Security\Repository\iUsuarioRepository.class
 com\jomc\jomc\Service\SExperiencia.class
