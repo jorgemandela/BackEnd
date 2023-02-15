@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,21 +28,21 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         ipersonaService.deletePersona(id);
         return "La persona fue borrada correctamente";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
             @RequestParam("nombre") String nuevoNombre,
@@ -59,7 +60,7 @@ public class PersonaController {
 
     @GetMapping("/personas/traer/perfil")
     public Persona findPersona() {
-        return ipersonaService.findPersona((long) 5);
+        return ipersonaService.findPersona((long) 1);
     }
 
 }
